@@ -6,6 +6,11 @@ import static org.junit.Assert.assertEquals;
 
 public class MaxTest {
   @Test
+  public void whenPassedOneIntMaxReturnsThatInt() {
+    assertEquals(2, Max.of(2));
+  }
+
+  @Test
   public void maxFindsLargerOfTwoInts() {
     assertEquals(3, Max.of(2, 3));
   }
