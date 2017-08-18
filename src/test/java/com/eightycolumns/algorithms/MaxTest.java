@@ -19,4 +19,10 @@ public class MaxTest {
   public void maxFindsLargestOfThreeInts() {
     assertEquals(4, Max.of(2, 3, 4));
   }
+
+  @Test
+  public void maxFindsLargestIntInArray() {
+    int[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    assertEquals(9, Max.in(array));
+  }
 }
