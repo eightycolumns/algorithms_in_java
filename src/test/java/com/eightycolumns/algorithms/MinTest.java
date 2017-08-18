@@ -9,4 +9,9 @@ public class MinTest {
   public void minFindsSmallerOfTwoInts() {
     assertEquals(2, Min.of(2, 3));
   }
+
+  @Test
+  public void minFindsSmallestOfThreeInts() {
+    assertEquals(2, Min.of(2, 3, 4));
+  }
 }
