@@ -1,0 +1,6 @@
+ALGORITHMS IN JAVA
+
+Tested with dockerized maven and gradle executables:
+
+https://github.com/eightycolumns/dockerized_maven
+https://github.com/eightycolumns/dockerized_gradle
