@@ -37,5 +37,30 @@ public class LinearSearchTest {
   public void iterativeLinearSearchCannotFindKeyTenInArray() {
     assertEquals(-1, LinearSearch.iterative(10, array));
   }
+
+  @Test
+  public void recursiveLinearSearchFindsKeyZeroAtIndexZeroInArray() {
+    assertEquals(0, LinearSearch.recursive(0, array));
+  }
+
+  @Test
+  public void recursiveLinearSearchFindsKeyFourAtIndexFourInArray() {
+    assertEquals(4, LinearSearch.recursive(4, array));
+  }
+
+  @Test
+  public void recursiveLinearSearchFindsKeyFiveAtIndexFiveInArray() {
+    assertEquals(5, LinearSearch.recursive(5, array));
+  }
+
+  @Test
+  public void recursiveLinearSearchFindsKeyNineAtIndexNineInArray() {
+    assertEquals(9, LinearSearch.recursive(9, array));
+  }
+
+  @Test
+  public void recursiveLinearSearchCannotFindKeyTenInArray() {
+    assertEquals(-1, LinearSearch.recursive(10, array));
+  }
 }
 
