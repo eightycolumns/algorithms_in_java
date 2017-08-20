@@ -14,4 +14,9 @@ public class AbsTest {
   public void absoluteValueOfZeroIsZero() {
     assertEquals(0, Abs.of(0));
   }
+
+  @Test
+  public void absoluteValueOfPositiveOneIsPositiveOne() {
+    assertEquals(1, Abs.of(1));
+  }
 }
