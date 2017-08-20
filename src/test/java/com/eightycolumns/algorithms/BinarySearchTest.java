@@ -59,4 +59,49 @@ public class BinarySearchTest {
   public void iterativeBinarySearchCannotFindKeyTenInOddLengthArray() {
     assertEquals(-1, BinarySearch.iterative(10, oddLengthArray));
   }
+
+  @Test
+  public void recursiveBinarySearchFindsKeyZeroAtIndexZeroInEvenLengthArray() {
+    assertEquals(0, BinarySearch.recursive(0, evenLengthArray));
+  }
+
+  @Test
+  public void recursiveBinarySearchFindsKeyFourAtIndexFourInEvenLengthArray() {
+    assertEquals(4, BinarySearch.recursive(4, evenLengthArray));
+  }
+
+  @Test
+  public void recursiveBinarySearchFindsKeyFiveAtIndexFiveInEvenLengthArray() {
+    assertEquals(5, BinarySearch.recursive(5, evenLengthArray));
+  }
+
+  @Test
+  public void recursiveBinarySearchFindsKeyNineAtIndexNineInEvenLengthArray() {
+    assertEquals(9, BinarySearch.recursive(9, evenLengthArray));
+  }
+
+  @Test
+  public void recursiveBinarySearchCannotFindKeyTenInEvenLengthArray() {
+    assertEquals(-1, BinarySearch.recursive(10, evenLengthArray));
+  }
+
+  @Test
+  public void recursiveBinarySearchFindsKeyOneAtIndexZeroInOddLengthArray() {
+    assertEquals(0, BinarySearch.recursive(1, oddLengthArray));
+  }
+
+  @Test
+  public void recursiveBinarySearchFindsKeyFiveAtIndexFourInOddLengthArray() {
+    assertEquals(4, BinarySearch.recursive(5, oddLengthArray));
+  }
+
+  @Test
+  public void recursiveBinarySearchFindsKeyNineAtIndexEightInOddLengthArray() {
+    assertEquals(8, BinarySearch.recursive(9, oddLengthArray));
+  }
+
+  @Test
+  public void recursiveBinarySearchCannotFindKeyTenInOddLengthArray() {
+    assertEquals(-1, BinarySearch.recursive(10, oddLengthArray));
+  }
 }
