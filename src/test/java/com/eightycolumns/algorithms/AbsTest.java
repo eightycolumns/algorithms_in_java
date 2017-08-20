@@ -9,4 +9,9 @@ public class AbsTest {
   public void absoluteValueOfNegativeOneIsPositiveOne() {
     assertEquals(1, Abs.of(-1));
   }
+
+  @Test
+  public void absoluteValueOfZeroIsZero() {
+    assertEquals(0, Abs.of(0));
+  }
 }
