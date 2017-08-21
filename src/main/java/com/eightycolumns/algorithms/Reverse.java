@@ -6,14 +6,18 @@ public class Reverse {
     int j = array.length - 1;
 
     while (i < j) {
-      int temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+      swap(i, j, array);
 
       i += 1;
       j -= 1;
     }
 
     return array;
+  }
+
+  private static void swap(int i, int j, int[] a) {
+    int temp = a[i];
+    a[i] = a[j];
+    a[j] = temp;
   }
 }
