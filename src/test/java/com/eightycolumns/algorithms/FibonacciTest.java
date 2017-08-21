@@ -1,10 +1,11 @@
 package com.eightycolumns.algorithms;
 
+import java.math.BigInteger;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class FibonacciTest {
   @Rule
@@ -19,16 +20,23 @@ public class FibonacciTest {
 
   @Test
   public void fibonacciNumberZeroIsZero() {
-    assertEquals(0, Fibonacci.number(0));
+    assertTrue(new BigInteger("0").equals(Fibonacci.number(0)));
   }
 
   @Test
   public void fibonacciNumberOneIsOne() {
-    assertEquals(1, Fibonacci.number(1));
+    assertTrue(new BigInteger("1").equals(Fibonacci.number(1)));
   }
 
   @Test
-  public void fibonacciNumberNineIsThirtyFour() {
-    assertEquals(34, Fibonacci.number(9));
+  public void fibonacciNumber9Is34() {
+    assertTrue(new BigInteger("34").equals(Fibonacci.number(9)));
+  }
+
+  @Test
+  public void fibonacciNumber99Is218922995834555169026() {
+    BigInteger expected = new BigInteger("218922995834555169026");
+    BigInteger actual = Fibonacci.number(99);
+    assertTrue(expected.equals(actual));
   }
 }
