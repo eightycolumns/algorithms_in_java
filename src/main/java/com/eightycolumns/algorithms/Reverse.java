@@ -15,6 +15,10 @@ public class Reverse {
     return array;
   }
 
+  public static int[] copyOf(int[] array) {
+    return Reverse.inPlace(array.clone());
+  }
+
   private static void swap(int i, int j, int[] a) {
     int temp = a[i];
     a[i] = a[j];
