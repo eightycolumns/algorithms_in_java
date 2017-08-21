@@ -14,4 +14,9 @@ public class FibonacciTest {
   public void fibonacciNumberOneIsOne() {
     assertEquals(1, Fibonacci.number(1));
   }
+
+  @Test
+  public void fibonacciNumberNineIsThirtyFour() {
+    assertEquals(34, Fibonacci.number(9));
+  }
 }
