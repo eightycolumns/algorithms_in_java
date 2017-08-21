@@ -12,4 +12,12 @@ public class ReverseTest {
 
     assertArrayEquals(new int[] {9, 8, 7, 6, 5, 4, 3, 2, 1, 0}, array);
   }
+
+  @Test
+  public void arrayWithOneElementIsReversedInPlace() {
+    int[] array = {2};
+    Reverse.inPlace(array);
+
+    assertArrayEquals(new int[] {2}, array);
+  }
 }
