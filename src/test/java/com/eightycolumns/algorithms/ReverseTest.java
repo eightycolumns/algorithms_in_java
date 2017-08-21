@@ -20,4 +20,12 @@ public class ReverseTest {
 
     assertArrayEquals(new int[] {2}, array);
   }
+
+  @Test
+  public void emptyArrayIsReversedInPlace() {
+    int[] array = {};
+    Reverse.inPlace(array);
+
+    assertArrayEquals(new int[] {}, array);
+  }
 }
