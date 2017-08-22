@@ -17,12 +17,18 @@ public class GreatestCommonDivisorTest {
 
   @Test
   public void gcdOf15And35Is5() {
-    assertEquals(5, GreatestCommonDivisor.of(15, 35));
+    assertEquals(5, GreatestCommonDivisor.of( 15,  35));
+    assertEquals(5, GreatestCommonDivisor.of(-15,  35));
+    assertEquals(5, GreatestCommonDivisor.of( 15, -35));
+    assertEquals(5, GreatestCommonDivisor.of(-15, -35));
   }
 
   @Test
   public void gcdOf35And77Is7() {
-    assertEquals(7, GreatestCommonDivisor.of(35, 77));
+    assertEquals(7, GreatestCommonDivisor.of( 35,  77));
+    assertEquals(7, GreatestCommonDivisor.of(-35,  77));
+    assertEquals(7, GreatestCommonDivisor.of( 35, -77));
+    assertEquals(7, GreatestCommonDivisor.of(-35, -77));
   }
 
 }

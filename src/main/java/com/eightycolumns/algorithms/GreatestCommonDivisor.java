@@ -2,6 +2,9 @@ package com.eightycolumns.algorithms;
 
 public class GreatestCommonDivisor {
   public static int of(int a, int b) {
+    a = Math.abs(a);
+    b = Math.abs(b);
+
     int min = Math.min(a, b);
     int max = Math.max(a, b);
 
