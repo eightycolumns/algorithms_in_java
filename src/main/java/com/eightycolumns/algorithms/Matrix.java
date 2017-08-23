@@ -7,6 +7,14 @@ public class Matrix {
   private final int cols;
 
   public Matrix(int[][] matrix) {
+    for (int i = 1; i < matrix.length; i += 1) {
+      if (matrix[0].length != matrix[i].length) {
+        throw new IllegalArgumentException(
+          "Matrix constructor expects equal-length rows"
+        );
+      }
+    }
+
     rows = matrix.length;
     cols = matrix[0].length;
 

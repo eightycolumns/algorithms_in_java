@@ -1,11 +1,30 @@
 package com.eightycolumns.algorithms;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class MatrixTest {
+  @Rule
+  public ExpectedException exception = ExpectedException.none();
+
+  @Test
+  public void matrixConstructorExpectsEqualLengthRows() {
+    exception.expect(IllegalArgumentException.class);
+
+    exception.expectMessage(
+      "Matrix constructor expects equal-length rows"
+    );
+
+    Matrix matrix = new Matrix(new int[][] {
+      {0, 1, 2, 3, 4, 5},
+      {6, 7, 8, 9}
+    });
+  }
+
   @Test
   public void dotProductOfTwoMatricesIsCorrectlyCalculated() {
     Matrix a = new Matrix(new int[][] {
