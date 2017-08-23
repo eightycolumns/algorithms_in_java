@@ -26,6 +26,27 @@ public class MatrixTest {
   }
 
   @Test
+  public void matrixMultiplicationRequiresCorrectNumbersOfRowsAndColumns() {
+    exception.expect(IllegalArgumentException.class);
+
+    exception.expectMessage(
+      "Matrix multiplication requires that the number of columns in the " +
+      "first matrix equals the number of rows in the second matrix"
+    );
+
+    Matrix a = new Matrix(new int[][] {
+      {0, 1, 2, 3, 4},
+      {5, 6, 7, 8, 9}
+    });
+
+    Matrix b = new Matrix(new int[][] {
+      {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+    });
+
+    Matrix matrix = a.times(b);
+  }
+
+  @Test
   public void dotProductOfTwoMatricesIsCorrectlyCalculated() {
     Matrix a = new Matrix(new int[][] {
       {0, 2, 4, 6},

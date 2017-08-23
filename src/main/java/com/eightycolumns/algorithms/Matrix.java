@@ -44,6 +44,13 @@ public class Matrix {
   }
 
   public Matrix times(Matrix matrix) {
+    if (this.cols != matrix.rows) {
+      throw new IllegalArgumentException(
+        "Matrix multiplication requires that the number of columns in the " +
+        "first matrix equals the number of rows in the second matrix"
+      );
+    }
+
     int[][] dotProduct = new int[this.rows][matrix.cols];
 
     for (int i = 0; i < this.rows; i += 1) {
