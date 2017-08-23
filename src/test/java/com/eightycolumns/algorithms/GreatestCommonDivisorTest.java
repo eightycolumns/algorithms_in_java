@@ -30,5 +30,4 @@ public class GreatestCommonDivisorTest {
     assertEquals(7, GreatestCommonDivisor.of( 35, -77));
     assertEquals(7, GreatestCommonDivisor.of(-35, -77));
   }
-
 }
