@@ -12,7 +12,7 @@ public class FibonacciTest {
   public ExpectedException exception = ExpectedException.none();
 
   @Test
-  public void fibonacciNumberExpectsNonNegativeInteger() {
+  public void integerMustBeNonNegative() {
     exception.expect(IllegalArgumentException.class);
     exception.expectMessage("Fibonacci.number() expects non-negative integer");
     Fibonacci.number(-1);
